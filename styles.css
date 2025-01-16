@@ -1,0 +1,236 @@
+/* Estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+/* Modo oscuro */
+body.oscuro {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50; /* Verde vibrante */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.oscuro header {
+    background-color: #333333;
+    color: #f0f0f0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Botón de modo oscuro */
+#modoOscuroBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #555555; /* Color neutro */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+#modoOscuroBtn:hover {
+    background-color: #444444;
+}
+
+body.oscuro #modoOscuroBtn {
+    background-color: #f0f0f0;
+    color: #121212;
+}
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+body.oscuro nav ul li a {
+    color: #4CAF50;
+}
+
+/* Estilo de formularios */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.oscuro form {
+    background-color: #1e1e1e;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #4CAF50;
+}
+
+body.oscuro input[type="text"],
+body.oscuro input[type="password"],
+body.oscuro input[type="number"],
+body.oscuro textarea,
+body.oscuro select {
+    background-color: #333333;
+    color: #f0f0f0;
+    border-color: #555555;
+}
+
+/* Botones */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+body.oscuro button {
+    background-color: #555555;
+    color: #f0f0f0;
+}
+
+/* Estilo de tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+body.oscuro table th {
+    background-color: #333333;
+    color: #f0f0f0;
+}
+
+body.oscuro table td {
+    background-color: #1e1e1e;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+body.oscuro footer {
+    background-color: #121212;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    table,
+    table th,
+    table td {
+        font-size: 0.9rem;
+    }
+}
+

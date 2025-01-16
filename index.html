@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos e Inventario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Productos e Inventarios</h1>
+        <button id="modoOscuroBtn">Modo Oscuro</button>
+        <nav>
+            <ul>
+                <li><a href="#gestion-productos">Gestión de Productos</a></li>
+                <li><a href="#visualizacion-productos">Visualización de Productos</a></li>
+                <li><a href="#actualizacion-inventario">Actualización de Inventario</a></li>
+                <li><a href="#edicion-productos">Edición de Productos</a></li>
+                <li><a href="#eliminacion-productos">Eliminación de Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Gestión de productos -->
+        <section id="gestion-productos">
+            <h2>Gestión de Productos</h2>
+            <form id="form-agregar-producto">
+                <label for="nombre">Nombre del producto:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+
+                <label for="precio">Precio unitario:</label>
+                <input type="number" id="precio" name="precio" step="0.01" required>
+
+                <label for="cantidad">Cantidad inicial en inventario:</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+
+                <button type="submit">Agregar Producto</button>
+            </form>
+        </section>
+
+        <!-- Visualización de productos -->
+        <section id="visualizacion-productos">
+            <h2>Visualización de Productos</h2>
+            <input type="text" id="buscar" placeholder="Buscar por nombre">
+            <select id="filtro-precio">
+                <option value="">Filtrar por precio</option>
+                <option value="asc">Ascendente</option>
+                <option value="desc">Descendente</option>
+            </select>
+            <select id="filtro-cantidad">
+                <option value="">Filtrar por cantidad</option>
+                <option value="asc">Ascendente</option>
+                <option value="desc">Descendente</option>
+            </select>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-productos">
+                    <!-- Los productos se mostrarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Actualización de inventario -->
+        <section id="actualizacion-inventario">
+            <h2>Actualización de Inventario</h2>
+            <form id="form-actualizar-inventario">
+                <label for="producto-inventario">Producto:</label>
+                <select id="producto-inventario" name="producto-inventario" required>
+                    <!-- Opciones dinámicas -->
+                </select>
+
+                <label for="cantidad-entrada">Entradas (+):</label>
+                <input type="number" id="cantidad-entrada" name="cantidad-entrada">
+
+                <label for="cantidad-salida">Salidas (-):</label>
+                <input type="number" id="cantidad-salida" name="cantidad-salida">
+
+                <button type="submit">Actualizar Inventario</button>
+            </form>
+        </section>
+
+        <!-- Edición de productos -->
+        <section id="edicion-productos">
+            <h2>Edición de Productos</h2>
+            <form id="form-editar-producto">
+                <label for="producto-editar">Seleccionar Producto:</label>
+                <select id="producto-editar" name="producto-editar" required>
+                    <!-- Opciones dinámicas -->
+                </select>
+
+                <label for="nuevo-nombre">Nuevo Nombre:</label>
+                <input type="text" id="nuevo-nombre" name="nuevo-nombre">
+
+                <label for="nueva-descripcion">Nueva Descripción:</label>
+                <textarea id="nueva-descripcion" name="nueva-descripcion"></textarea>
+
+                <label for="nuevo-precio">Nuevo Precio:</label>
+                <input type="number" id="nuevo-precio" name="nuevo-precio" step="0.01">
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </section>
+
+        <!-- Eliminación de productos -->
+        <section id="eliminacion-productos">
+            <h2>Eliminación de Productos</h2>
+            <form id="form-eliminar-producto">
+                <label for="producto-eliminar">Seleccionar Producto:</label>
+                <select id="producto-eliminar" name="producto-eliminar" required>
+                    <!-- Opciones dinámicas -->
+                </select>
+
+                <button type="submit">Eliminar Producto</button>
+            </form>
+        </section>
+
+        <!-- Inicio de sesión -->
+        <section id="inicio-sesion">
+            <h2>Inicio de Sesión</h2>
+            <form id="form-inicio-sesion">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gestión de Productos e Inventarios. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
